@@ -1,0 +1,5 @@
+@import '../../styles/Root.scss';
+
+.container {
+    @include wireframe($pd-top40);
+}

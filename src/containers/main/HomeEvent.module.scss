@@ -1,0 +1,79 @@
+@import '../../styles/Root.scss';
+
+.container {
+    width: 100%;
+    position: relative;
+    max-width: $max-width;
+    min-width: $min-width;
+    overflow: hidden;
+    .event-swiper{
+        overflow: hidden;
+        .event-slide{
+            overflow: hidden;
+        }
+    }
+    .item {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        align-items: center;
+        background: #e4e4e4;
+        color: #fff;
+        font-size: 36px;
+        @include animation(0.5s, fadeIn);
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.count {
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    width: 48px;
+    height: 22px;
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    text-align: center;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 12px;
+    color: rgb(197, 197, 197);
+    font-size: 12px;
+    span:nth-child(1) {
+        color: white;
+
+        &::after {
+            display: inline-block;
+            width: 1px;
+            height: 10px;
+            content: ' ';
+            background: rgba(255, 255, 255, 0.8);
+            margin: 0px 6px;
+        }
+    }
+}
+
+@include keyframe(fadeIn) {
+    from {
+        filter: blur(100px);
+    }
+    to {
+        filter: blur(0);
+    }
+}
+
+// @keyframes fadeIn{
+//     from{
+//         filter: blur(10px);
+//     }
+//     to{
+//         filter: blur(0);
+
+//     }
+// }

@@ -1,0 +1,68 @@
+@import '../../styles/Root.scss';
+.title {
+    font-size: 16px;
+    color: #444;
+    padding: 8px $padding-all;
+    padding-top: 36px;
+}
+.modal-input-box {
+    // border: 1px solid red;
+    position: relative;
+    .won{
+        position: absolute;
+        top:50%;
+        right:15px;
+        transform:translateY(-50%);
+        color:#555;
+        font-size:18px;
+        font-weight: bold;
+    }
+    select {
+        width: 100%;
+        height: 56px;
+        padding: 0.8em 0.5em; /* 여백으로 높이 설정 */
+        border: 1px solid #ebebeb;
+        border-radius: 10px; /* iOS 둥근모서리 제거 */
+        // -webkit-appearance: none; /* 네이티브 외형 감추기 */
+        // -moz-appearance: none;
+        // appearance: none;
+        font-size:16px;
+        color:#222;
+        text-align-last: right;
+        padding-right:24px;
+    }
+    input {
+        width: 100%; height: 56px;
+        text-align: right;
+        padding: 0.8em 0.5em; /* 여백으로 높이 설정 */
+        padding-right: 48px;
+        border: 1px solid #ebebeb;
+        font-size: 16px;
+        font-weight: bold;
+        border-radius: 10px; /* iOS 둥근모서리 제거 */
+        box-sizing: border-box;
+        outline: none;
+    }
+}
+
+.counter {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border: 1px solid #ebebeb;
+    border-radius: 10px;
+    .box {
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+    }
+    .value {
+        box-sizing: border-box;
+        width: 100%;
+        border: none;
+        text-align: center;
+    }
+}

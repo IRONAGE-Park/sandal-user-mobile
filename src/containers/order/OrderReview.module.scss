@@ -1,0 +1,108 @@
+@import '../../styles/Root.scss';
+
+.container {
+    @include wireframe($pd-top);
+    height: 100vh;
+    overflow: hidden;
+    .table {
+        padding: 0 24px;
+
+        .rate-box {
+            text-align: center;
+            .title {
+                color: #222;
+                font-size: 16px;
+                font-weight: bold;
+            }
+            .rate {
+                margin-top: 16px;
+                & > svg {
+                    margin: 0 8px;
+                }
+            }
+        }
+        .r-content {
+            width: 100%; height: 160px;
+            box-sizing: border-box;
+            resize: none;
+            border: solid 1px #dbdbdb;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 50px;
+            font-size: 14px;
+            outline: none;
+            transition: all .15s ease-in-out;
+            &:focus {
+                border-color: #222;
+            }
+        }
+
+        .file {
+            margin-top: 16px;
+            .q-files {
+                display: none;
+            }
+            .file-finder {
+                width: 100%; height: 48px;
+                background-color: #f9f9f9;
+                border-radius: 10px;
+                .file-setter {
+                    display: table;
+                    width: 100%; height: 100%;
+                    text-align: center;
+                    .font {
+                        display: table-cell;
+                        vertical-align: middle;
+                        font-size: 16px;
+                        font-weight: bold;
+                        color: #333;
+                    }
+                }
+            }
+        }
+
+
+        .file-list {
+            padding-top: 24px;
+            margin-left: -20px;
+            white-space: nowrap;
+            overflow-x: auto;
+            overflow-y: visible;
+            .file-item {
+                display: inline-block;
+                margin-left: 20px;
+                position: relative;
+                border-radius: 2px;
+                .file-image {
+                    width: 80px; height: 80px;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                }
+                .delete {
+                    position: absolute;
+                    width: 25px; height: 25px;
+                    padding: 0;
+                    margin: 0;
+                    top: -8px; right: -8px;
+                    border-radius: 50%;
+                    background-color: #fff;
+                    border: solid 1px #ebebeb;
+                }
+            }
+        }
+
+        .button-area {
+            position: fixed;
+            left: 0; bottom: 0;
+            width: 100%; height: 60px;
+            .confirm-button {
+                width: 100%; height: 100%;
+                background-color: #007246;
+                color: #fff;
+                font-weight: 500;
+                font-size: 16px;
+            }
+        }
+    }
+}

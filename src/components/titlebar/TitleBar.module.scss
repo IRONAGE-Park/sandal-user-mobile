@@ -1,0 +1,49 @@
+@import '../../styles/Root.scss';
+
+.title-bar {
+    width: 100%;
+    height: 48px;
+    background-color: #fff;
+    z-index: 1000;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    .item {
+        @include flex-center(center);
+        max-width: $max-width;
+        margin: 0 auto;
+        padding: 0 24px;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        .title {
+            width: calc(100% - 80px);
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            font-size: 17px;
+            font-weight: bold;
+            text-align: center;
+            color: #222;
+        }
+        .empty,
+        .back {
+            width: 48px; height: 48px;
+            position: absolute;
+            .back-button {
+                width: 48px;
+                height: 48px;
+                left: -10px;
+            }
+        }
+        .empty {
+            right: 24px;
+        }
+        .back {
+            left: 24px;
+        }
+    }
+    &.not_view {
+        display: none;
+    }
+}

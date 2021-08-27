@@ -1,0 +1,55 @@
+@import '../../styles/Root.scss';
+html {
+    body {
+        .menu-item {
+            overflow: hidden;
+            text-align: left;
+            display: block;
+            border-radius: 10px;
+            box-sizing: border-box;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            margin-top: 30px;
+            .menu-img {
+                width: 100%;
+                @include animation(0.5s, fadeIn);
+                img {
+                    width: 100%;
+                }
+            }
+            &:first-child {
+                margin: 0;
+            }
+            .menu-info {
+                display: flex;
+                justify-content: space-between;
+                align-items:flex-end;
+                padding-top: 18px;
+                padding-bottom: 18px;
+                font-size: 16px;
+                .menu-name{
+                    padding-right: 16px;;
+                }
+                .menu-price {
+                    font-weight: bold;
+                    white-space: nowrap;
+                }
+            }
+        }
+        .pd-box {
+            padding: $padding-side;
+        }
+    }
+}
+.menu-list {
+    padding: 24px;
+}
+
+@include keyframe(fadeIn) {
+    from {
+        filter: blur(50px);
+    }
+    to {
+        filter: blur(0);
+    }
+}

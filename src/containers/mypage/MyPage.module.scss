@@ -1,0 +1,119 @@
+@import '../../styles/Root.scss';
+
+.container {
+    @include wireframe($pd-top40);
+    background-color: #f9f9f9;
+    //유저 정보
+    .user-info {
+        width: 100%;
+        height: 120px;
+        padding: 0;
+        text-align: left;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        font-size: $font-size;
+        margin-bottom: 32px;
+        background-color: #fff;
+        .profile {
+            width: 100px;
+            display: flex;
+            justify-content: center;
+        }
+        .info {
+            width: 100%;
+            height: 120px;
+            padding-left: 16px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            .point {
+                margin-top: 8px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 1px solid #ebebeb;
+                border-radius: 16px;
+                box-sizing: border-box;
+                width: 152px;
+                height: 32px;
+
+                font-weight: bold;
+                font-size: 14px;
+                .name {
+                    color: #222;
+                    margin-right: 10px;
+                }
+                .value {
+                    color: #555;
+                }
+            }
+            .auth {
+                font-size: 16px;
+                color: #333;
+                .name {
+                    span {
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+        .link {
+            display: flex;
+            justify-content: center;
+            width: 50px;
+        }
+    }
+}
+
+//공지사항, 이벤트 및 링크 컴포넌트
+.tab {
+    display: flex;
+    flex-direction: column;
+    .pd-box {
+        padding: $padding-side;
+        background-color: #fff;
+        border-radius: 0;
+        &:not(:first-child) {
+            border-top: 1px solid #f9f9f9;
+        }
+    }
+    .item {
+        width: 100%;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        color: #333;
+        font-size: $font-size + 4;
+        
+    }
+    .version {
+        white-space: nowrap;
+        color: #777;
+        font-size: 14px;
+        font-weight: normal;
+    }
+}
+.logout {
+    width: 100%;
+    height: 176px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 24px;
+    .logout-btn {
+        width: 100%;
+        height: 56px;
+        background-color: #fff;
+        border: 1px solid #dbdbdb;
+        box-sizing: border-box;
+        border-radius: 10px;
+    }
+}
+.pd-left {
+    padding-left: 24px;
+}
+.pd-right {
+    padding-right: 24px;
+}

@@ -1,0 +1,114 @@
+@import '../../styles/Root.scss';
+
+.cart-item {
+    width: 100%;
+    min-height: 192px;
+
+    height: auto;
+    margin: 10px 0;
+    box-sizing: border-box;
+    background-color: white;
+    &:first-child {
+        margin: 0;
+    }
+    .item-box {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        .item {
+            display: flex;
+            flex-direction: row;
+            .item-img {
+                width: 120px; height: 120px;
+                margin-right: 24px;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                img {
+                    width: 120px;
+                    height: 120px;
+                }
+            }
+
+            .item-info {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                font-size: $font-size;
+                .bar {
+                    display: flex;
+                    justify-content: space-between;
+                    font-size: 20px;
+                    .name {
+                        max-height: 300px;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        font-size: 18px;
+                        font-weight: 500;
+                        margin: 5px 0;
+                    }
+                    .delete {
+                        cursor: pointer;
+                        color: #999999;
+                        width: 32px; height: 32px;
+                    }
+                }
+                .options {
+                    font-size: $font-size + 2;
+                    color: #999;
+                    margin: 5px 0;
+                }
+                .count-price {
+                    display: flex;
+                    justify-content: space-between;
+                    margin: 5px 0;
+
+                    .count {
+                        width: 100%;
+                        display: inline-flex;
+                    }
+                    .price {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    .price {
+        display: flex;
+        justify-content: flex-end;
+        font-size: 18px;
+        font-weight: bold;
+        color: #222;
+        margin-top: 10px;
+    }
+}
+html {
+    body {
+        .cart_link {
+            position: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            bottom: 108px;
+            right: 24px;
+            z-index: 999;
+            width: 64px; height: 64px;
+            border-radius: 100px;
+            background-color: #fff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            transition: all .5s ease-in-out;
+            transform: scale(0) rotate(359deg);
+            &.render {
+                transform: scale(1) rotate(0deg);
+            }
+            img {
+                width: 40px; height: 40px;
+            }
+        }
+    }
+}
+
+.pd-box {
+    padding: $padding-all;
+}

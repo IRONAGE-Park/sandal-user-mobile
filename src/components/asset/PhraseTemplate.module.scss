@@ -1,0 +1,9 @@
+.list {
+    display: flex;
+    width: 100%;
+    overflow-x: auto;
+    padding: 0 12px;
+    .item {
+        margin: 0 12px;
+    }
+}

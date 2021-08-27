@@ -1,0 +1,42 @@
+@import '../../styles/Root.scss';
+
+.additional-item {
+    font-size: $font-size;
+    & + & {
+        margin-top: 20px;
+    }
+}
+
+.check {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+}
+input[type='checkbox'] {
+    display: none;
+}
+
+.label {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    word-break: keep-all;
+    font-size: 16px;
+    color: #555;
+}
+
+input[type='checkbox'] + label svg {
+    margin-right: 17px;
+}
+.sub-text {
+    font-size: 12px;
+    color: #999999;
+    line-height: 1.2;
+    position: relative;
+    cursor: pointer;
+}
+
+.price {
+    margin-left: 10px;
+    white-space: nowrap;
+}

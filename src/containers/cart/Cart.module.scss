@@ -1,0 +1,96 @@
+@import '../../styles/Root.scss';
+
+.container {
+    @include wireframe($pd-top40);
+    width: 100%;
+    background-color: #f9f9f9;
+    .bar {
+        width: 100%;
+        height: 56px;
+        position: relative;
+        .pd-box {
+            padding: $padding-all;
+        }
+        .delete {
+            position: absolute;
+            top: 50%;
+            right: 24px;
+            font-size: 14px;
+            color: #555;
+            transform: translateY(-50%);
+            border: 1px solid #dbdbdb;
+            background-color: white;
+            box-sizing: border-box;
+            line-height: 32px;
+            text-align: center;
+            width: 80px;
+            height: 32px;
+        }
+    }
+
+    .finally {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        font-size: 16px;
+        color: #777;
+        .title {
+            &.total {
+                color: black;
+                font-size: 18px;
+            }
+        }
+
+        .pd-box {
+            padding: $padding-all;
+
+            .finally-price {
+                display: flex;
+                justify-content: space-between;
+                margin: 20px 0;
+            }
+            .order-text {
+                text-align: center;
+                font-size: $font-size;
+                color: #999999;
+                margin: 20px 0;
+            }
+            .estm {
+                display: flex;
+                justify-content: space-between;
+                padding: 24px 0;
+                .check {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border: 1px solid $normal-color;
+                    box-sizing: border-box;
+                    border-radius: 2px;
+                    width: 156px;
+                    height: 56px;
+                    &.on {
+                        border: 1px solid $main-color;
+                        .value {
+                            color: $main-color;
+                        }
+                    }
+                    .check-box {
+                        padding: 5px;
+                    }
+                    .value {
+                        padding: 5px;
+                        font-size: 16px;
+                    }
+                }
+
+                .title {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+}
+.bold {
+    font-weight: bold;
+}

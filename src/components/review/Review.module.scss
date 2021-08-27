@@ -1,0 +1,113 @@
+@import '../../styles/Root.scss';
+
+.container {
+    background-color: #F9F9F9;
+    padding-top: 28px;
+    padding-bottom: 40px;
+    box-sizing: border-box;
+    overflow: hidden;
+    .title {
+        padding: 0 24px;
+        font-size: 18px;
+        font-weight: bold;
+        color: #222;
+        margin-bottom: 24px;
+    }
+}
+
+.review-list {
+    box-sizing: border-box;
+    width: 80%;
+    padding: 0 24px;
+    white-space: nowrap;
+    overflow-x: visible;
+    &::after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 0;
+        overflow: hidden;
+        clear: both;
+    }
+    :global(.swiper-container) {
+        overflow: visible;
+    }
+}
+.review-item {
+    @include animation(0.5s, fadeIn);
+    box-sizing: border-box;
+    border-radius: 10px;
+    overflow: hidden;
+    border: solid 1px #dbdbdb;
+    background-color: #fff;
+    width: 100%;
+    display: inline-block;
+    cursor: pointer;
+    transition: all .15s ease-in-out;
+    .review-img {
+        width: 100%;
+        height: 240px;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .body {
+        font-size: 14px;
+        color: #555;
+        line-height: 20px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    //메뉴 정보 텍스트 영역
+    .info {
+        margin-top: 20px;
+        width: 100%;
+        .user {
+            max-width: 100px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            vertical-align: middle;
+            font-size: 16px;
+            font-weight: bold;
+            color: #999;
+            span {
+                color: #333;
+            }
+        }
+    }
+    &:hover {
+        box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.15);
+    }
+    & + & {
+        margin-left: 20px;
+    }
+}
+
+.rating {
+    margin-top: 8px;
+    .rate {
+        color: #777;
+        font-size: 18px;
+        font-weight: bold;
+        margin-left: 5px;
+    }
+    svg,
+    .rate {
+        vertical-align: middle;
+    }
+}
+
+@include keyframe(fadeIn) {
+    from {
+        filter: blur(100px);
+    }
+    to {
+        filter: blur(0);
+    }
+}
+.pd-box {
+    margin-top: 5px;
+    padding: 20px;
+}

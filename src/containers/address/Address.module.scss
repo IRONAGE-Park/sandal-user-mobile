@@ -1,0 +1,97 @@
+@import '../../styles/Root.scss';
+
+.container {
+    @include wireframe(40px);
+    .title {
+        font-size: 18px;
+        font-weight: bold;
+        color: #444;
+        margin: 24px 0;
+    }
+    .addr-input {
+        position: relative;
+        .input-box {
+            width: 100%;
+            height: 56px;
+            border: 1px solid #dbdbdb;
+            border-radius: 10px;
+            padding: 10px;
+            font-size: 14px;
+            transition: border .15s ease-in-out;
+            &:focus {
+                border-color: #007246;
+            }
+        }
+        .search-btn {
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 32px; height: 32px;
+            position: absolute;
+            right: 40px; top: 50%;
+            transform: translateY(-50%);
+            svg {
+                display: block;
+                width: 24px; height: 24px;
+                fill: $main-color;
+            }
+        }
+    }
+    .addr-list {
+        display: flex;
+        flex-direction: column;
+    }
+    .location-btn {
+        width: 100%;
+        font-size:16px;
+        border: 1px solid $main-color;
+        display: flex;
+        border-radius: 10px;
+        color: $main-color;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+        margin: 16px 0;
+    }
+}
+
+.recently-title {
+    color: #444;
+    height: 48px;
+    font-size: 16px;
+    background-color: #F9F9F9;
+    display: flex;
+    align-items: center;
+    padding :$padding-side;
+}
+
+.addrs-box {
+    display: flex;
+    flex-direction: column;
+
+    .addrs-list {
+        width: auto;
+        height: 500px;
+        border: 1px solid black;
+    }
+    .modal-input {
+        width: 100%;
+        height: 50px;
+        margin-top: 10px;
+    }
+}
+
+.setting-btn {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: 40px;
+    border: 1px solid black;
+    padding: 2px;
+}
+.pd-box{
+    @include padding-side;
+}

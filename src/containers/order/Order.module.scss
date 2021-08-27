@@ -1,0 +1,294 @@
+@import '../../styles/Root.scss';
+.order {
+    width: 100%;
+    @include wireframe($pd-top40);
+    display: flex;
+    flex-direction: column;
+    font-size: 30px;
+    input[type='text'] {
+        border-radius: 2px;
+    }
+    .title {
+        font-size: 18px;
+        font-weight: bold;
+        background-color: #f9f9f9;
+        display: flex;
+        align-items: center;
+        height: 56px;
+    }
+    .table {
+        display: flex;
+        flex-direction: column;
+        padding: 26px 24px;
+        font-size: $font-size;
+        .receiver-box {
+            padding-bottom: 24px;
+        }
+        .text-info {
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 8px;
+            .user-name {
+                font-size: 16px;
+                font-weight: bold;
+                color: #333;
+                margin-bottom: 8px;
+            }
+            &.address {
+                display: block;
+                .info {
+                    font-size: 16px;
+                }
+            }
+            &.auth-area {
+                position: relative;
+                left: -30%;
+                opacity: 0;
+                height: 0;
+                transition: 0.3s ease-in-out;
+                .timer {
+                    position: absolute;
+                    top: 50%;
+                    right: 110px;
+                    transform: translateY(-50%);
+                }
+                &.auth_open {
+                    left: 0;
+                    opacity: 1;
+                    height: 100%;
+                }
+            }
+            .text {
+                width: 450px;
+                font-size: $font-size;
+            }
+            .info {
+                font-size: 14px;
+                width: 100%;
+                word-break: keep-all;
+                line-height: 1.6;
+                // font-size: $font-size;
+
+                &.row {
+                    display: flex;
+                    flex-direction: row;
+                    margin-bottom: 0;
+                    .auth-btn {
+                        @include flex-center(center);
+                        min-width: 100px;
+                        height: 56px;
+                        border: 1px solid $main-color;
+                        color: $main-color;
+                        font-size: 14px;
+                    }
+                }
+                .input {
+                    width: 100%;
+                    border: 1px solid #ebebeb;
+                    box-sizing: border-box;
+                    background-color: white;
+                    height: 56px;
+                    margin: 0;
+                    padding-left: 16px;
+                    font-size: 14px;
+                    &.normal {
+                        margin-bottom: 16px;
+                    }
+                }
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        .input-save {
+            font-size: 16px;
+            display: flex;
+            justify-content: space-between;
+            .save {
+                @include flex-center(center);
+                font-size: 14px;
+                input[type='checkbox'] {
+                    display: block;
+                    width: 16px;
+                    height: 16px;
+                    border: 1px solid #dbdbdb;
+                    cursor: pointer;
+                }
+                label {
+                    padding-left: 5px;
+                }
+            }
+        }
+        .value {
+            width: 100%;
+            padding-top: 10px;
+            .input {
+                width: 100%;
+                height: 56px;
+                border: 1px solid #ebebeb;
+                box-sizing: border-box;
+                background-color: white;
+                font-size: 14px;
+                margin: 0;
+                padding-left: 15px;
+            }
+            .payment {
+                @include flex-center(center);
+                width: 100%;
+                height: 56px;
+                border: 1px solid $main-color;
+                border-radius: 2px;
+                font-size: 16px;
+                font-weight: 500;
+                color: $main-color;
+            }
+            .label {
+                margin: 15px 0;
+                color: #999;
+                text-align: center;
+            }
+            &.mg-bot {
+                margin-bottom: 30px;
+            }
+        }
+
+        .total-order {
+            margin: 20px 0;
+            .item {
+                @include flex-center(center);
+                flex-direction: column;
+                border-radius: 2px;
+                overflow: hidden;
+                .total-table {
+                    width: 100%;
+                    padding: 10px 0;
+                    border: 1px solid #dbdbdb;
+                    box-sizing: border-box;
+                    background-color: #fff;
+                }
+                .text-cost {
+                    width: 100%;
+                    @include flex-center(space-between);
+                    &.title {
+                        background-color: $main-color;
+                        border: 1px solid $main-color;
+                        box-sizing: border-box;
+                        width: 100%;
+                        height: 56px;
+                        color: white;
+                        font-size: 16px;
+                        font-weight: bold;
+                    }
+                    &.info {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+
+    .date-picker {
+        padding: 26px 24px;
+        .date {
+            width: 100%;
+            margin-bottom: 15px;
+            input {
+                border-radius: 0 !important;
+            }
+        }
+        .time {
+            display: flex;
+            select {
+                border: 1px solid #dbdbdb;
+                outline: none;
+                height: 56px;
+                padding: 0;
+                width: 100%;
+                font-size: 14px;
+                padding-left: 15px;
+            }
+
+            .second {
+                &:first-child {
+                    margin-right: 15px;
+                }
+                width: 100%;
+                // border:1px solid red;
+                input {
+                    border: 1px solid #dbdbdb;
+                    box-sizing: border-box;
+                    outline: none;
+                    font-size: 14px;
+                    height: 48px;
+                }
+            }
+        }
+    }
+
+    .order-info {
+        display: flex;
+        flex-direction: column;
+        border: 0px solid black;
+        width: 100%;
+
+        .info {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 16px;
+        }
+        .box {
+            @include flex-center(space-between);
+            width: 100%;
+            height: 56px;
+            font-size: 16px;
+            color: #333;
+            border-top: 1px solid #ebebeb;
+            box-sizing: border-box;
+            &:not(:first-child) {
+                border-top: 1px solid #ebebeb;
+                border-bottom: 1px solid #ebebeb;
+            }
+            .label {
+                font-weight: bold;
+            }
+            .sub-title {
+                font-size: 16px;
+                margin: 20px 0 10px 0;
+            }
+        }
+        .line {
+            border-bottom: 1px solid rgb(199, 199, 199);
+        }
+    }
+}
+.agree-order {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    .text {
+        padding-left: 10px;
+    }
+}
+.pd-box {
+    padding: 0 24px;
+}
+.pd-none {
+    padding-top: 0 !important;
+}
+.pd-in {
+    width: 100%;
+    padding: 5px 24px;
+}
+.pd-top {
+    padding-top: 30px;
+}
+.bt-mg {
+    margin-top: 20px;
+    margin-bottom: 70px;
+}
+.bg-color {
+    background-color: #f9f9f9;
+}

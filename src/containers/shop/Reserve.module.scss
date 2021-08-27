@@ -1,0 +1,107 @@
+@import '../../styles/Root.scss';
+.container {
+    @include wireframe($pd-top);
+    height: 100vh;
+    overflow: hidden;
+    // border:5px solid blue;
+    .pd-box {
+        padding: $padding-all;
+    }
+    ul {
+        position: relative;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        margin: 24px;
+        margin-bottom: 0;
+        // border:1px solid red;
+        display: flex;
+        li {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 0 0 0;
+            padding: 0 0 0 0;
+            border: 0;
+            height: 30px;
+            font-size: 14px;
+            color: #999;
+            border-radius: 5px;
+            border: solid 1px #dbdbdb;
+            background-color: #fff;
+            box-sizing: border-box;
+            margin-right: 15px;
+            overflow: hidden;
+            transition: all 0.15s ease-in-out;
+            button {
+                padding: 5px 10px;
+                font-size: 12px;
+            }
+            &.active {
+                border-color: #333;
+                background-color: #333;
+                button {
+                    font-weight: bold;
+                    color: #fff;
+                }
+            }
+        }
+    }
+    .length{
+        padding : 0 24px;
+        margin-top: 15px;
+        font-size: 12px;
+        color:#777;
+        b{
+            color:#222;
+        }
+    }
+    .title {
+        padding: 20px 24px;
+        padding-bottom: 0;
+        font-size: 20px;
+        font-weight: bold;
+        color: #444;
+    }
+    .swiper {
+        @include swiper($pd-top);
+        .swiper-slide {
+            @include swiper-slide($pd-top);
+        }
+    }
+}
+
+.tab-item {
+    margin: 0px !important;
+    margin-left: 24px !important;
+    padding: 0 24px !important;
+    width: auto !important;
+    font-size: 16px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+.tab-list {
+    position: fixed;
+    top: 40px;
+    height: 40px;
+    margin: 0 auto;
+    width: 100%;
+    max-width: $max-width;
+}
+:global .line {
+    border-bottom: 4px solid #222222;
+}
+html {
+    body {
+        .refesh {
+            position: absolute;
+            right: 24px;
+            top: 24px;
+            transition: all 1.2s cubic-bezier(0.77, -1, 0.4, 2.26);
+            &:hover {
+                transform: rotate(-270deg);
+            }
+        }
+    }
+}

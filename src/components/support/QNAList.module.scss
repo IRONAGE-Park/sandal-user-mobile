@@ -1,0 +1,48 @@
+@import '../../styles/Root.scss';
+
+.qna-list {
+    list-style: none;
+    border-top: 1px solid #ebebeb;
+    margin: 0;
+    padding: 0;
+}
+
+.list-element {
+    width: 100%;
+    border-bottom: solid 1px #ebebeb;
+    .preview {
+        width: 100%;
+        height: 95px;
+        padding: 0 24px;
+        @include flex-center(space-between);
+
+        .content {
+            text-align: left;
+            .subject {
+                color: #444;
+                font-size: 16px;
+                font-weight: normal;
+            }
+            .text {
+                font-size: 12px;
+                .name {
+                    color: #777;
+                }
+                .date-time {
+                    margin-left: 24px;
+                    color: #999;
+                }
+            }
+        }
+        .tag {
+            font-size: 14px;
+            width: 72px;
+            height: 32px;
+            border: solid 1px #dbdbdb;
+            @include flex-center(center);
+            &.complete {
+                color: $main-color;
+            }
+        }
+    }
+}

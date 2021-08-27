@@ -1,0 +1,16 @@
+@import '../../styles/Root.scss';
+.container {
+    @include wireframe(40px);
+    .content {
+        padding-top: $pd-top40;
+        .box {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+    }
+}
+.pd-box {
+    padding: $padding-side;
+}

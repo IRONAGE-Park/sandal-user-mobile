@@ -1,0 +1,86 @@
+@import '../../styles/Root.scss';
+
+.bottom-modal {
+    display: block;
+    position: fixed;
+    max-width: $max-width;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 100%;
+    z-index: 2500;
+    width: 100%;
+    padding: 30px 24px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    box-sizing: border-box;
+    background-color: white;
+    transition: all 0.3s ease-in-out;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    &.on {
+        -webkit-transform: translateY(-100%);
+        transform: translateY(-100%);
+    }
+    .table {
+        .title {
+            margin-bottom: 10px;
+        }
+        .month-cell {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+
+            .date-box {
+                width: 100%;
+                height: 56px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: 1px solid #dbdbdb;
+                font-size: 16px;
+                &:first-child {
+                    border-bottom-left-radius: 10px;
+                    border-top-left-radius: 10px;
+                }
+                &:last-child {
+                    border-bottom-right-radius: 10px;
+                    border-top-right-radius: 10px;
+                }
+                &.select {
+                    border-color: #007246;
+                    color: #007246;
+                    font-weight: 500;
+                }
+            }
+        }
+        .date-cell {
+            margin-top: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            height: 50px;
+            margin-bottom: 50px;
+            .box {
+                width: 100%;
+                height: 50px;
+            }
+            .line {
+                width: 10px;
+                margin: 0 10px;
+                height: 1px;
+                background-color: #999999;
+            }
+        }
+    }
+}
+html {
+    body {
+        .dim {
+            z-index: 2000;
+        }
+    }
+}

@@ -1,0 +1,18 @@
+@import '../../styles/Root.scss';
+
+.total {
+    font-size: 14px;
+    white-space: nowrap;
+    line-height: 48px;
+    .read-btn {
+        color: #dbdbdb;
+        &.available {
+            color: #777;
+        }
+    }
+}
+
+.container {
+    @include wireframe($pd-top40);
+    background-color: #f9f9f9;
+}

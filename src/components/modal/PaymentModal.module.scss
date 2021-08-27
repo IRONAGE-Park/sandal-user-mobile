@@ -1,0 +1,36 @@
+@import '../../styles/Root.scss';
+.title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    padding: $padding-all;
+    padding-bottom: 0;
+}
+.empty {
+    width: 50px;
+    height: 50px;
+}
+.container {
+    padding: $padding-all;
+    .payment-box {
+        width: 100%;
+        height: 56px;
+        border-radius: 10px;
+        border: 2px solid #dbdbdb;
+        margin-top: 24px;
+        padding: 0px 24px;
+        @include flex-center(space-between);
+        color: #333;
+        font-size: 16px;
+
+        transition: all 0.15s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+        &.on {
+            border: 2px solid $main-color;
+            font-weight: bold;
+            color: $main-color;
+        }
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+}

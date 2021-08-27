@@ -1,0 +1,51 @@
+@import '../../styles/Root.scss';
+
+.pd-box {
+    padding: 0 24px;
+}
+.pd-side {
+    padding: 10px;
+}
+
+.downcoupon-list {
+    .coupon-item {
+        cursor: pointer;
+        width: 100%;
+        height: 168px;
+        box-sizing: border-box;
+        position: relative;
+        text-align: left;
+        border-radius: 10px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+        margin-top: 24px;
+        &:last-child {
+            margin-bottom: 24px;
+        }
+        .down {
+            min-width: 100px;
+            height: 168px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+            border-right: 1px dashed #dbdbdb;
+        }
+        .info {
+            width: 100%;
+            font-size: 14px;
+            box-sizing: border-box;
+            color: #777;
+            .event-name {
+                font-weight: bold;
+                font-size: 18px;
+                color: #222;
+            }
+            .date,
+            .sale,
+            .sub-name {
+                margin-top: 8px;
+            }
+        }
+    }
+}

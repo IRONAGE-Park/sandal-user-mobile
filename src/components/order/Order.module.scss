@@ -1,0 +1,116 @@
+html {
+    body {
+        .order-item {
+            display: block;
+            text-align: left;
+            width: 100%;
+            box-sizing: border-box;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+            border-radius: 10px;
+            margin-top: 24px;
+            background-color: #fff;
+            &:first-child {
+                margin-top: 0;
+            }
+            &:last-child {
+                margin-bottom: 24px;
+            }
+            .item {
+                display: flex;
+                flex-direction: column;
+
+                .menu {
+                    .date {
+                        padding-bottom: 24px;
+                        font-size: 12px;
+                        color: #999999;
+                    }
+                    .list {
+                        .menu-name {
+                            margin: 5px 0;
+                            margin-bottom: 20px;
+                            .name {
+                                font-size: 16px;
+                                font-weight: bold;
+                            }
+                            .options {
+                                font-size: 12px;
+                                color: #555555;
+                                margin : 10px 0;
+                            }
+                        }
+                    }
+                }
+                .cost {
+                    border-top: 1px solid #ebebeb;
+                    box-sizing: border-box;
+                    .total {
+                        font-size: 18px;
+                        font-weight: bold;
+                        position: relative;
+                        span {
+                            padding-right: 10px;
+                            color: transparent;
+                            &::before {
+                                content: '';
+                                width: 60px;
+                                display: block;
+                                position: absolute;
+                                margin-top: 10px;
+                                border-radius: 10px;
+                                z-index: 0;
+                                border-bottom: 11px solid #fcd700;
+                            }
+                            &::after {
+                                color: #222;
+                                font-size: 16px;
+                                content: '결제금액';
+                                position: absolute;
+                                top: 0; left: 0;;
+                            }
+                        }
+                    }
+                    .sub {
+                        margin-top: 10px;
+                        line-height: 1.5;
+                        color: #555555;
+                        font-size: 12px;
+                    }
+                    .button-area {
+                        margin-top: 32px;
+
+                        .button {
+                            height: 48px;
+                            font-size: 16px;
+                            font-weight: bold;
+                            border-radius: 2px;
+                            border: solid 1px;
+                            border-color: #EBEBEB;
+                            &.order-type {
+                                width: 100%;
+                                color: #777;
+                                &.order_complete, &.delivery_complete {
+                                    width: calc(50% - 4px);
+                                }
+                            }
+                            &.review {
+                                width: calc(50% - 4px);
+                                margin-left: 8px;
+                                color: #555;
+                                font-weight: 500;
+                                &.new {
+                                    border-color: #007246;
+                                    color: #007246;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.pd-box {
+    padding: 24px;
+}

@@ -1,0 +1,24 @@
+@import '../../styles/Root.scss';
+
+.container {
+    @include wireframe(80px);
+    height: 100vh;
+    overflow: hidden;
+    .swiper{
+        @include swiper($pd-top);
+
+        .swiper-slide{
+             @include swiper-slide($pd-top);
+             padding: $padding-all;
+             color: #777;
+             font-size: 12px;
+             line-height: 24px;
+        }   
+    }
+    .content {
+        padding: $padding-all;
+        color: #777;
+        font-size: 12px;
+        line-height: 24px;
+    }
+}

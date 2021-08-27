@@ -1,0 +1,28 @@
+@import '../../styles/Root.scss';
+
+.container {
+    @include wireframe(40px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .title {
+            color: $main-color;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .img {
+            width: 100%;
+        }
+        .text {
+            text-align: center;
+            font-size: 16px;
+            color: #555;
+            padding-top: 36px;
+        }
+    }
+}

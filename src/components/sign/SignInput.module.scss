@@ -1,0 +1,59 @@
+@import '../../styles/Root.scss';
+
+.sign-input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 12px;
+    input {
+        line-height: 1.2;
+        font-size: 14px;
+        background: #fff;
+        height: 48px;
+        outline: none;
+        box-sizing: border-box;
+        padding-left: 16px;
+        margin: 5px 0;
+        border-width: 0 0 1px;
+        border-color: #EBEBEB;
+        transition: all .3s ease-in-out;
+
+        &:focus{
+            border-color: #000;
+        }
+    
+        &.normal{
+            width: 100%;
+        }
+        
+        &.auth{
+            width: 100%;
+        }
+    }
+
+    .auth-btn{
+        width: 100%;
+        height: 56px;
+        border: 1px solid $main-color;
+        border-radius: $border-radius;
+        box-sizing: border-box;
+        margin : 24px 0;
+        color:$main-color;
+        font-size:16px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+   }
+   .success{
+        border: 1px solid #ebebeb;
+        // background-color: #cccccc;
+        color:#cccccc;
+   }
+   .toggle{
+    border: none;    
+    background-color: #F9F9F9;
+    color: black;
+   }
+}

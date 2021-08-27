@@ -1,0 +1,150 @@
+@import '../../styles/Root.scss';
+$menu-items: 2;
+
+.bottom-nav {
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+    z-index: 1300;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.08);
+    .pd-box {
+        width: 100%;
+        box-sizing: border-box;
+        max-width: $max-width;
+        min-width: $min-width;
+        margin: 0 auto;
+        padding: 5px 10px;
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 72px;
+            height: 72px;
+            border-radius: 50%;
+            left: 50%;
+            transform: translateX(-50%);
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.08);
+            bottom: 10px;
+            background-color: #fff;
+        }
+        .nav-list {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: baseline;
+            width: 100%;
+            height: 60px;
+            position: relative;
+            &::before {
+                content: '';
+                display: block;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: -5px;
+                background-color: #fff;
+            }
+            .nav-item {
+                display: flex;
+                position: relative;
+                bottom: 10px;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                width: 60px;
+                height: 60px;
+                color: $main-color;
+                img {
+                    width: 24px;
+                    height: 24px;
+                }
+                .menu-name {
+                    font-size: 11px;
+                    font-weight: 700;
+                    line-height: 1.1;
+                    letter-spacing: -0.16px;
+                    margin-top: 2px;
+                    color: #999999;
+                }
+                .active {
+                    color: $main-color;
+                }
+            }
+            .order {
+                width: 56px;
+                height: 56px;
+                background-color: #007246;
+                border-radius: 50%;
+                .menu-open {
+                    display: none;
+                }
+                .menu-item {
+                    border: solid 2px #007246;
+                    background: #fff;
+                    display: flex;
+                    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 30px;
+                    width: 144px;
+                    height: 48px;
+                    position: absolute;
+                    color: #007246;
+                    text-decoration: none;
+                    font-size: 16px;
+                    font-weight: bold;
+                    box-sizing: border-box;
+                    transform: translate3d(0, 0, 0) scale(0, 0);
+                    transition: transform ease-out 200ms;
+                    &:hover {
+                        background: #007246;
+                        color: #fff;
+                    }
+                    @for $i from 1 through $menu-items {
+                        &:nth-child(#{$i + 2}) {
+                            transition-duration: 180ms;
+                        }
+                    }
+                }
+                .menu-open-button {
+                    z-index: 2;
+                    width: 24px;
+                    height: 24px;
+                    transition: transform
+                        cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.4s;
+                    transform: scale(1) translate3d(0, 0, 0);
+                    cursor: pointer;
+                    // &:hover {
+                    //     transform: scale(1.2, 1.2) translate3d(0, 0, 0);
+                    // }
+                    .menu {
+                        position: absolute;
+                        transition: transform
+                            cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.4s;
+                        transform: scale(0, 0);
+                        &.visible {
+                            transform: scale(1, 1);
+                        }
+                    }
+                }
+                .menu-open:checked ~ .menu-item {
+                    transition-timing-function: cubic-bezier(
+                        0.935,
+                        0,
+                        0.34,
+                        1.33
+                    );
+                    &:nth-child(3) {
+                        transition-duration: 80ms+ (100ms);
+                        transform: translate3d(-92px, -75px, 0);
+                    }
+                    &:nth-child(4) {
+                        transition-duration: 80ms+ (200ms);
+                        transform: translate3d(92px, -75px, 0);
+                    }
+                }
+            }
+        }
+    }
+}

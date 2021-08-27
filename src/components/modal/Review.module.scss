@@ -1,0 +1,134 @@
+.dialog {
+    display: flex;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 0px 15px rgba(0, 0, 0, 0.8);
+    overflow: hidden;
+    .slick-img {
+        width: 100%;
+        height: 100%;
+        ul {
+            bottom: 30px;
+            button {
+                &::before {
+                    font-size: 20px;
+                    line-height: 20px;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 20px;
+                    height: 20px;
+                    content: '•';
+                    text-align: center;
+                }
+            }
+        }
+        .img {
+            width: 100%;
+            height: 300px;
+        }
+        .detail-button {
+            width: 100%; height: 60px;
+            background-color: #007246;
+            font-size: 16px;
+            font-weight: 500;
+            color: #fff;
+        }
+    }
+    .content {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 24px;
+        background-color: #fff;
+        .user-info {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 16px;
+            .user-profile {
+                img {
+                    width: 40px; height: 40px;
+                }
+            }
+            .user-email {
+                font-weight: bold;
+                .email {
+                    color: #222;
+                }
+                span {
+                    color: #999;
+                }
+            }
+            .info {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                .created-at {
+                    margin-top: 8px;
+                    margin-right: 10px;
+                    font-weight: bold;
+                    color: #dbdbdb;
+                    text-align: right;
+                }
+            }
+        }
+        .review-info {
+            .review-box {
+                margin-top: 20px;
+                width: 100%;
+                box-sizing: border-box;
+                .review-image {
+                    width: 100%;
+                    white-space: nowrap;
+                    overflow-x: auto;
+                    .small-image {
+                        display: inline-block;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        width: 72px; height: 72px;
+                        border-radius: 4px;
+                    }
+                }
+                .review {
+                    font-size: 14px;
+                    line-height: 1.8;
+                    color: #555;
+                }
+            }
+        }
+        .tags {
+            margin-top: 10px;
+            margin-left: -10px;
+
+            .tag {
+                font-size: 12px;
+                color: #333;
+                padding: 5px 16px;
+                margin-left: 10px;
+                margin-top: 10px;
+                border: solid 1px #EBEBEB;
+                transition: all .15s ease-in-out;
+                border-radius: 21px;
+                span, img {
+                    vertical-align: middle;
+                }
+                span {
+                    word-break: keep-all;
+                }
+                img {
+                    margin-left: 20px;
+                }
+                &:hover {
+                    border-color: transparent;
+                    box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.15);
+                }
+            }
+        }
+    }
+}
+.small-image {
+    & + & {
+        margin-left: 8px;
+    }
+}

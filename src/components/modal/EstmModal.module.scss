@@ -1,0 +1,60 @@
+@import '../../styles/Root.scss';
+.title {
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+    padding: 8px $padding-all;
+    margin-top: 20px;
+}
+.modal-input-box {
+    // border: 1px solid red;
+    .modal-input {
+        width: 100%; /* 원하는 너비설정 */
+        height: 56px;
+        padding: 0.8em 0.5em; /* 여백으로 높이 설정 */
+        border: 1px solid #999;
+        border-radius: 10px; /* iOS 둥근모서리 제거 */
+        box-sizing: border-box;
+        font-size: 16px;
+        outline: none;
+    }
+}
+
+.empty {
+    width: 50px;
+    height: 50px;
+}
+
+.btn {
+    box-sizing: border-box;
+    overflow: hidden;
+    position: fixed;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    cursor: pointer;
+    display: flex;
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    transition: background-color 0.15s ease-in-out;
+
+    .item {
+        width: 100%;
+        height: 56px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $normal-color;
+        &.on {
+            background-color: $main-color;
+        }
+    }
+}
+
+.empty {
+    width: 50px;
+    height: 50px;
+}
